@@ -11,7 +11,7 @@ export class ViewComponent implements OnInit {
   constructor(private myapi:ApiService) {
     this.fetchData()
    }
-
+status:boolean=false
 
 
 
@@ -20,6 +20,7 @@ export class ViewComponent implements OnInit {
     this.myapi.viewFriends().subscribe(
       (data)=>{
 this.friendsData=data
+this.status=true
       }
     )
   }
